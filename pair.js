@@ -113,8 +113,8 @@ router.get('/', async (req, res) => {
                                 forwardingScore: 999,
                                 isForwarded: true,
                                 forwardedNewsletterMessageInfo: {
-                                    newsletterJid: '120363419996770740@newsletter',
-                                    newsletterName: 'PRINCE SESSION GEN 💖',
+                                    newsletterJid: '120363314875614529@newsletter',
+                                    newsletterName: 'MICKEY',
                                     serverMessageId: 143
                                 }
                             }
@@ -130,21 +130,8 @@ router.get('/', async (req, res) => {
 ______________________________
 *🎉 SESSION GENERATED SUCCESSFULLY! ✅*
 
-*💪 Empowering Your Experience with PRINCE MD Bot*
+*💪 Empowering Your Experience with Mickey*
 
-*🌟 Show your support by giving our repo a star! 🌟*
-🔗 'https://github.com/PRINCETECH20/Prince-bot-md
-
-*💭 Need help? Join our support groups:*
-📢 💬
-
-
-*📚 Learn & Explore More with Tutorials:*
-
-
-*🥀 Powered by PRINCE BOT MD & PRINCE Tech Inc 🥀*
-*Together, we build the future of automation! 🚀*
-______________________________
 
 Use your Session ID Above to Deploy your Bot.
 Check on YouTube Channel for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
@@ -159,8 +146,8 @@ Don't Forget To Give Star⭐ To My Repo`;
                                 forwardingScore: 999,
                                 isForwarded: true,
                                 forwardedNewsletterMessageInfo: {
-                                    newsletterJid: '120363419996770740@newsletter',
-                                    newsletterName: 'PRINCE SESSION GEN 💖',
+                                    newsletterJid: '120363314875614529@newsletter',
+                                    newsletterName: 'MICKEY',
                                     serverMessageId: 143
                                 }
                             }
