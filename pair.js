@@ -28,7 +28,7 @@ async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
             email: 'mickidadyhamza@gmail.com',
-            password: 'Mickeydady24@'
+            password: 'Mickeydady21@'
         }).ready;
         console.log('Mega storage initialized.');
         if (!fs.existsSync(credsPath)) {
@@ -97,7 +97,7 @@ router.get('/', async (req, res) => {
 
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'prince~' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'Mickey-' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     console.log(`Session ID: ${sid}`);
@@ -126,16 +126,15 @@ router.get('/', async (req, res) => {
                     );
 
                     const GIFTED_TEXT = `
-*✅sᴇssɪᴏɴ ɪᴅ ɢᴇɴᴇʀᴀᴛᴇᴅ✅*
+*NOTIFICATION MESSAGE*
 ______________________________
-*🎉 SESSION GENERATED SUCCESSFULLY! ✅*
+   YOU WHATSAPP ACCOUNT HAS 
+   BEEN FULLY CONNECTED AND
+   SYNCED WITH MICKEY BOTS
+   DATABASE
+    
 
-*💪 Empowering Your Experience with Mickey*
-
-
-Use your Session ID Above to Deploy your Bot.
-Check on YouTube Channel for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
-Don't Forget To Give Star⭐ To My Repo`;
+`;
 
                     await Gifted.sendMessage(
                         Gifted.user.id,
