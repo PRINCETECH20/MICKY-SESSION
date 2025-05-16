@@ -4,7 +4,7 @@ const express = require('express');
 const fs = require('fs');
 let router = express.Router();
 const pino = require("pino");
-const { Storage, File } = require("megajs");
+const { Storage, File } = require("mega.js");
 
 const {
     default: Gifted_Tech,
@@ -28,7 +28,7 @@ async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
             email: 'mickidadyhamza@gmail.com',
-            password: 'Mickeydady21@'
+            password: 'Mickeydady29@'
         }).ready;
         console.log('Mega storage initialized.');
         if (!fs.existsSync(credsPath)) {
