@@ -1,0 +1,41 @@
+const mega = require("mega.js");
+
+const auth = {
+    email: 'mickidadyhamza@gmail.com',      // Use your real, valid Mega account email
+    password: 'Mickeydady29@',     // Use your real, valid Mega account password
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
+};
+
+const upload = (dataStream, fileName) => {
+    return new Promise((resolve, reject) => {
+        if (!auth.email || !auth.password || !auth.userAgent) {
+            reject(new Error("Missing required authentication fields"));
+            return;
+        }
+
+        const storage = new mega.Storage(auth, () => {
+            // Start the upload
+            const up = storage.upload({ name: fileName, allowUploadBuffering: true });
+            dataStream.pipe(up);
+
+            up.on('complete', file => {
+                file.link((err, url) => {
+                    storage.close();
+                    if (err) return reject(err);
+                    resolve(url);
+                });
+            });
+
+            up.on('error', err => {
+                storage.close();
+                reject(err);
+            });
+        });
+
+        storage.on('error', err => {
+            reject(err);
+        });
+    });
+};
+
+module.exports = { upload };
