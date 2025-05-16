@@ -1,4 +1,4 @@
-const mega = require("mega.js");
+const mega = require("megajs");
 
 const auth = {
     email: 'mickidadyhamza@gmail.com',      // Use your real, valid Mega account email
