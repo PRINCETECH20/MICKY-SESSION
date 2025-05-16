@@ -4,7 +4,7 @@ const express = require('express');
 const fs = require('fs');
 let router = express.Router();
 const pino = require("pino");
-const { Storage, File } = require("mega.js");
+const { Storage, File } = require("megajs");
 
 const {
     default: Gifted_Tech,
